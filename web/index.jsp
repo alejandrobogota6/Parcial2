@@ -34,7 +34,7 @@
               
                         <h1>Nomina </h1>   
 
-                        <div class="slogan">Nominas al instante</div> 
+                        <div class="slogan">Empleados</div> 
                                  
                         <p>&nbsp;</p>
 
@@ -81,9 +81,9 @@
                     <form action="Index" method="post">
                         <div class="form_settings">
                             <p><span>Cedula</span>
-                                <input class="contact" type="text" name="cedula" value="" /></p>
+                                <input class="contact" type="number" name="Cedula" value="" /></p>
                             <p><span>Nuevo salario</span>
-                                <input class="contact" type="number" name="salario" value="" /></p>
+                                <input class="contact" type="number" name="Salario" value="" /></p>
                         
                             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="actualizar" value="Actualizar" /></p>
                         </div>
@@ -92,7 +92,6 @@
                 </div>
             </div>
             <div id="footer">
-                <p>Calle 74# 63-12 Bogota colombia  -  tel:(57) (1) 4381889  </p>
             </div>
         </div>
     </body>
