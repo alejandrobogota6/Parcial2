@@ -23,7 +23,7 @@ public class Conexion {
 
             try {
                 CONEXION = DriverManager.getConnection("jdbc:mysql://localhost:3306/parcial", "root", "root");
-                System.out.println("voy");
+                System.out.println("Conexión Establecida");
             } catch (SQLException e) {
                 throw new SQLException(e);
             }

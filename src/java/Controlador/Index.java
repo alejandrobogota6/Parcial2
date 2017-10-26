@@ -6,7 +6,7 @@
 package Controlador;
 
 
-import DAO.Crud_salario;
+import DAO.Insert_salario;
 import dato.Salario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -40,8 +40,8 @@ public class Index extends HttpServlet {
             Salario s=new Salario(cedula,salario);
             BD d = new BD();
             d.addNuevoreguistro(s);
-            Crud_salario f = new Crud_salario();  
-            System.out.println(f.update(d));
+            Insert_salario f = new Insert_salario();  
+//            System.out.println(f.update(d));
             
             
 //            

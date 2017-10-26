@@ -14,7 +14,7 @@ import java.sql.SQLException;
  *
  * @author JCBOT
  */
-public class Crud_salario {
+public class Insert_salario {
     
     
     
@@ -25,8 +25,8 @@ public class Crud_salario {
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setString(1, t.getNameTabla());
-            preparedStmt.setInt(2, t.getIdTabla());
+//            preparedStmt.setString(1, t.getNameTabla());
+//            preparedStmt.setInt(2, t.getIdTabla());
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
             }
