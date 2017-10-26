@@ -16,9 +16,7 @@ import servicios.BD;
  * @author Labing I5
  */
 public class Insert_salario {
-    
-    
-    
+
     public boolean update(BD t) throws SQLException {
         boolean result = false;
         Connection connection = Conexion.getConnection();
@@ -26,8 +24,11 @@ public class Insert_salario {
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setInt(1, t.getActivos().get(0).getCedula());
-            preparedStmt.setInt(2, t.getActivos().get(0).getSalario());
+            for (int i = 0; i < t.getActivos().size(); i++) {
+                preparedStmt.setInt(1, t.getActivos().get(i).getCedula());
+                preparedStmt.setInt(2, t.getActivos().get(i).getSalario());
+            }
+            preparedStmt.execute();
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
             }
@@ -38,5 +39,5 @@ public class Insert_salario {
 
         return result;
     }
-    
+
 }
