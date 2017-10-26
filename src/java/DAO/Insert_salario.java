@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author JCBOT
+ * @author Bogotá
  */
 public class Insert_salario {
     
