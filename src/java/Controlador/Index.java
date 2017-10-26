@@ -6,6 +6,8 @@
 package Controlador;
 
 
+import DAO.Crud_salario;
+import dato.Salario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -16,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import servicios.BD;
 
 /**
  *
@@ -34,8 +37,11 @@ public class Index extends HttpServlet {
             int cedula=Integer.parseInt(cedulaq);
             int salario=Integer.parseInt(salarioq);
             
-            
-            
+            Salario s=new Salario(cedula,salario);
+            BD d = new BD();
+            d.addNuevoreguistro(s);
+            Crud_salario f = new Crud_salario();  
+            System.out.println(f.update(d));
             
             
 //            

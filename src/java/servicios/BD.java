@@ -5,30 +5,30 @@
  */
 package servicios;
 
-//import dato.Venta;
-//
-//import java.io.Serializable;
-//import java.util.ArrayList;
-//
-///**
-// *
-// * @author Isabel-Fabian
-// */
-//public class BD implements Serializable {
-//
-//    private ArrayList<Venta> activos;
-//
-//    public BD() {
-//        this.activos = new ArrayList<Venta>();
-//
-//    }
-//
-//    public void addVenta(Venta activo) {
-//        this.activos.add(activo);
-//    }
-//
-//    public ArrayList<Venta> getActivos() {
-//        return activos;
-//    }
-//
-//}
+import dato.Salario;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Isabel-Fabian
+ */
+public class BD implements Serializable {
+
+    private ArrayList<Salario> activos;
+
+    public BD() {
+        this.activos = new ArrayList<Salario>();
+
+    }
+
+    public void addNuevoreguistro(Salario activo) {
+        this.activos.add(activo);
+    }
+
+    public ArrayList<Salario> getActivos() {
+        return activos;
+    }
+
+}
