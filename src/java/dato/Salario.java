@@ -7,7 +7,7 @@ package dato;
 
 /**
  *
- * @author JCBOT
+ * @author Labing I5
  */
 public class Salario {
     
