@@ -12,7 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Bogotá
+ * @author Labing I5
  */
 public class Insert_salario {
     
@@ -21,12 +21,12 @@ public class Insert_salario {
     public boolean update(Salario t) throws SQLException {
         boolean result = false;
         Connection connection = Conexion.getConnection();
-        String query = "update tablee set NameTable = ? where IdTable = ?";
+        String query = "update empleado set Salario = ? where Cedula = ?";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
-//            preparedStmt.setString(1, t.getNameTabla());
-//            preparedStmt.setInt(2, t.getIdTabla());
+            preparedStmt.setInt(1, t.getSalario());
+            preparedStmt.setInt(2, t.getCedula());
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
             }
