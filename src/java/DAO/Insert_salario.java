@@ -9,6 +9,7 @@ import dato.Salario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import servicios.BD;
 
 /**
  *
@@ -18,15 +19,15 @@ public class Insert_salario {
     
     
     
-    public boolean update(Salario t) throws SQLException {
+    public boolean update(BD t) throws SQLException {
         boolean result = false;
         Connection connection = Conexion.getConnection();
         String query = "update empleado set Salario = ? where Cedula = ?";
         PreparedStatement preparedStmt = null;
         try {
             preparedStmt = connection.prepareStatement(query);
-            preparedStmt.setInt(1, t.getSalario());
-            preparedStmt.setInt(2, t.getCedula());
+            preparedStmt.setInt(1, t.getActivos().get(0).getCedula());
+            preparedStmt.setInt(2, t.getActivos().get(0).getSalario());
             if (preparedStmt.executeUpdate() > 0) {
                 result = true;
             }
